@@ -1,0 +1,26 @@
+h1{
+font-size:20px;
+margin:0 auto;
+margin-top:40px;
+background-color:#fbfbfb;
+border-left:5px solid red;
+padding-left:10px;
+}
+form{
+    margin:0 auto;
+    background-color:#fbfbfb;
+    margin:0 auto;
+    margin-top:20px;
+    border-radius:10px;
+    border:3px solid #ebebeb;
+    width:500px;
+    padding-left:15px;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+div{
+    margin:10px;
+}
+.submit{
+    border-bottom:3px gray solid;
+}
