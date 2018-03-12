@@ -3,11 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>4eachblog 掲示板</title>
-<link rel="stylesheet"type="text/css"href="style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
     
 <body>
+<?php
+    mb_internal_encoding("utf8");
+    $pdo = new PDO("mysql:dbname=lesson01;host=localhost;","root","mysql");
+    $stmt = $pdo->query("select*from 4each_kejiban");
+    
+    while($row = $stmt->fetch()){
+        echo $row['handlename'];
+        echo $row['title'];
+        echo $row['comments'];
+    }
+    ?>
  <img src="4eachblog_logo.jpg" width="250px" height="80px">
  <header>
  <ul>
@@ -48,10 +59,54 @@
         
     </form>
         </div>
-    
+    <div class="title1">
+    <h3>タイトル</h3>
+    <div class="contents">記事の中身。記事の中身。記事の中身。記事の中身記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
+    <br>
+    記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
+     <br>記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。</div>
+    <div class="postname">posted by 通りすがり</div>
     </div>
-    <div class="right"></div>
-    </div>    
+    <div class="title2">
+    <h3>タイトル</h3>
+    <div class="contents">記事の中身。記事の中身。記事の中身。記事の中身記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
+    <br>
+    記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
+     <br>記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。   </div>
+    <div class="postname">posted by 通りすがり</div>
+    </div>
+    </div>
+    <div class="right">
+    <div class="favorite">
+    <h3>人気の記事</h3>
+    <ul>
+    <li>PHPオススメ本</li>
+    <li>PHP MyAdminの使い方</li>
+    <li>いま人気のエディタTop5</li>
+    <li>HTTMLの基礎</li>
+    </ul>
+    </div>
+    <div class="recomend">
+    <h3>オススメリンク</h3>
+    <ul>
+    <li>インターノウス株式会社</li>
+    <li>XAMPPのダウンロード</li>
+    <li>Eclipseのダウンロード</li>
+    <li>Braketsのダウンロード</li>
+    </ul>
+    </div>
+    <div class="category">
+    <h3>カテゴリ</h3>
+    <ul>
+    <li>HTML</li>
+    <li>PHP</li>
+    <li>MySQL</li>
+    <li>JavaScript</li>
+    </ul>
+     </div>
+    </div>
+    </div>
+    <footer>copyright internous | 4each blog is the one which provides A to Z about programming.</footer>  
 </main>
 </body>
 </html>
