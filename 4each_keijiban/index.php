@@ -13,11 +13,7 @@
     $pdo = new PDO("mysql:dbname=lesson01;host=localhost;","root","mysql");
     $stmt = $pdo->query("select*from 4each_kejiban");
     
-    while($row = $stmt->fetch()){
-        echo $row['handlename'];
-        echo $row['title'];
-        echo $row['comments'];
-    }
+    
     ?>
  <img src="4eachblog_logo.jpg" width="250px" height="80px">
  <header>
@@ -59,21 +55,17 @@
         
     </form>
         </div>
-    <div class="title1">
-    <h3>タイトル</h3>
-    <div class="contents">記事の中身。記事の中身。記事の中身。記事の中身記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
-    <br>
-    記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
-     <br>記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。</div>
-    <div class="postname">posted by 通りすがり</div>
-    </div>
-    <div class="title2">
-    <h3>タイトル</h3>
-    <div class="contents">記事の中身。記事の中身。記事の中身。記事の中身記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
-    <br>
-    記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。
-     <br>記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。記事の中身。   </div>
-    <div class="postname">posted by 通りすがり</div>
+    <? php
+    while ($row = $stmt->fetch()){
+    echo "<div class='title1'>";
+    echo "<h3>".$row['title']."</h3>";
+    echo "<div class='contents'>";
+    echo $row['comments'];
+    echo "<div class='postname'>投稿者".$row['handlename']."</div>";
+    echo "</div>";
+    echo "</div>"
+    }
+    ?>
     </div>
     </div>
     <div class="right">
@@ -104,7 +96,6 @@
     <li>JavaScript</li>
     </ul>
      </div>
-    </div>
     </div>
     <footer>copyright internous | 4each blog is the one which provides A to Z about programming.</footer>  
 </main>
