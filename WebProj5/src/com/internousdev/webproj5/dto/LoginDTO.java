@@ -1,4 +1,4 @@
-package com.internousdev.webproj4.dto;
+package com.internousdev.webproj5.dto;
 
 public class LoginDTO {
 	private String username;
@@ -7,13 +7,17 @@ public class LoginDTO {
 	public String getUsername(){
 		return username;
 	}
+
 	public void setUsername(String username){
 		this.username=username;
 	}
-	public String getPassword(){
+
+	public String getPAssword(){
 		return password;
 	}
+
 	public void setPassword(String password){
 		this.password=password;
 	}
+
 }
