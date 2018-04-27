@@ -44,7 +44,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		/**
 		 * アイテム情報を取得
 		 */
-		private BuyItemDAO byiItemDAO = new BuyItemDAO();
+		private BuyItemDAO buyItemDAO = new BuyItemDAO();
 
 		/**
 		 * 実行メソッド
@@ -62,10 +62,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				result=SUCCESS;
 
 				//アイテム情報を取得
-				BuyItemDTO buyItemDTO=buyItemDAO.getBuyItemInfo();
+				BuyItemDTO i=buyItemDAO.getBuyItemInfo();
 				session.put("login_user_id",loginDTO.getLoginId());
-				session.put("buyItem_name",buyItemDTO.getItemName());
-				session.put("buyItem_price",buyItemDTO.getItemPrice());
+				session.put("buyItem_name",i.getItemName());
+				session.put("buyItem_price",i.getItemPrice());
 				return result;
 			}
 			return result;
