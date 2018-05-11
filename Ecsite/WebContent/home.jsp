@@ -13,7 +13,8 @@
 <title>Home画面</title>
 
 <style type="text/css">
-/* ====TAG LAYOUT ====* /
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -29,6 +30,7 @@ table {
 	text-align: center;
 	margin: 0 auto;
 }
+
 /*====ID LAYOUT=====*/
 #top {
 	width: 780px;
