@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text.javascript"/>
-<meta name="description" content="" />
+<meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <title>buyItem画面</title>
 <style type="text/css">
@@ -65,11 +65,11 @@ table {
 		<table>
 			<tr>
 				<td><span>商品名</span></td>
-				<td><s:property value="session.buyItem_name" /></td>
+				<td><s:property value="session.buyItem_name"/></td>
 			</tr>
 			<tr>
 				<td><span>値段</span></td>
-				<td><s:property value="session.buyItem_price" /> <span>円</span>
+				<td><s:property value="session.buyItem_price"/> <span>円</span>
 				</td>
 			</tr>
 			<tr>
