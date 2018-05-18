@@ -11,7 +11,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware{
 	public Map<String,Object>session;
 	public String deleteFlg;
-	private String result;
+	String result;
 	public String execute() throws SQLException{
 		MyPageDAO myPageDAO = new MyPageDAO();
 		MyPageDTO myPageDTO = new MyPageDTO();
@@ -59,9 +59,21 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 	}
 
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+	public String getDeleteFlg() {
+		return deleteFlg;
+	}
+
 	@Override
-	public void setSession(Map<String,Object>loginSessionMap){
-		this.session=loginSessionMap;
+	public void setSession(Map<String,Object>session){
+		this.session=session;
 	}
 
 }
