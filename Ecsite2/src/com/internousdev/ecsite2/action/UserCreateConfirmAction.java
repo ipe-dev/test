@@ -5,12 +5,12 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UseCreateConfirmAction extends ActionSupport implements SessionAware{
+public class UserCreateConfirmAction extends ActionSupport implements SessionAware{
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
 	public Map<String,Object> session;
-	private String errorMassage;
+	private String errorMessage;
 
 	public String execute(){
 		String result = SUCCESS;
@@ -18,11 +18,11 @@ public class UseCreateConfirmAction extends ActionSupport implements SessionAwar
 		if(!(loginUserId.equals(""))
 			&&!(loginPassword.equals(""))
 			&&!(userName.equals(""))){
-			session.put("logiuUserId", loginUserId);
+			session.put("loginUserId", loginUserId);
 			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);
 		}else{
-			setErrorMassage("未入力の項目があります。");
+			setErrorMessage("未入力の項目があります。");
 			result=ERROR;
 		}
 		return result;
@@ -58,11 +58,11 @@ public class UseCreateConfirmAction extends ActionSupport implements SessionAwar
 	public void setSession(Map<String,Object>session){
 		this.session=session;
 	}
-	public String getErrorMassage(String errorMassage){
-		return errorMassage;
+	public String getErrorMessage(){
+		return errorMessage;
 	}
-	public void setErrorMassage(String errorMassage){
-		this.errorMassage=errorMassage;
+	public void setErrorMessage(String errorMessage){
+		this.errorMessage = errorMessage;
 	}
 
 }
