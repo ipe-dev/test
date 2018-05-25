@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib prefix="s" uri="/struts-tags" %>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +10,11 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
-<title>Insert title here</title>
+<title>Home画面</title>
 
 <style type="text/css">
 /*=====TAG LAYOUT======*/
+
 body {
 	margin: 0;
 	padding: 0;
@@ -31,7 +32,8 @@ table {
 
 /*=====ID LAYOUT=====*/
 #top {
-	width: 780px margin:30px auto;
+	width: 780px;
+	margin:30px auto;
 	border: 1px solid #333;
 }
 
