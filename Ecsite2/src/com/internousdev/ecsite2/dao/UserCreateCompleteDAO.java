@@ -16,10 +16,10 @@ public class UserCreateCompleteDAO {
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, loginUserId);
-			preparedStatement.setString(2, loginUserPassword);
-			preparedStatement.setString(3, userName);
-			preparedStatement.setString(4, dateUtil.getDate());
+			preparedStatement.setString(1,loginUserId);
+			preparedStatement.setString(2,loginUserPassword);
+			preparedStatement.setString(3,userName);
+			preparedStatement.setString(4,dateUtil.getDate());
 
 			preparedStatement.execute();
 		}catch(Exception e){

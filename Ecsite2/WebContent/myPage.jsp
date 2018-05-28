@@ -108,10 +108,10 @@ text-align:right;
 			</s:if>
 			<div id="text-right">
 				<p>
-					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+					Homeへ戻る場合は<a href='<s:url action="HomeAction"/>'>こちら</a>
 				</p>
 				<p>
-					ログアウト数場合は<a href='<s:url action="LogoutAction"/>'>こちら</a>
+					ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a>
 				</p>
 			</div>
 		</div>

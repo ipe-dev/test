@@ -3,6 +3,7 @@ set foreign_key_checks=0;
 drop database if exists ecsite2;
 
 create database if not exists ecsite2;
+use ecsite2;
 drop table if exists login_user_transaction;
 
 create table login_user_transaction(
